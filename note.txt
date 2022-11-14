@@ -1,0 +1,7 @@
+tải source
+giải nén source,
+import db
+sửa db trong .env
+tạo vender = composer 
+chỉnh lại vhost và localhost -> restart  
+=> run source 
