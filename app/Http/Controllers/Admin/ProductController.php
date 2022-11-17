@@ -52,12 +52,12 @@ class ProductController extends AdminController
     {
         $item = null;
 
-        $itemId = $this->model->createItemDraft();
+        // $itemId = $this->model->createItemDraft();
         // $itemId = 217;
-        $listVariant = ProductAttributeModel::listVariant($itemId);
+        // $listVariant = ProductAttributeModel::listVariant($itemId);
         return view($this->pathViewController .  'create', [
-            'itemId'        => $itemId,
-            'listVariant'   => $listVariant
+            // 'itemId'        => $itemId,
+            // 'listVariant'   => $listVariant
         ]);
     }
 
