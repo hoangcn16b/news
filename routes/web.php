@@ -161,16 +161,6 @@ Route::group(['prefix' => $prefixAdmin, 'namespace' => 'Admin', 'middleware' => 
         Route::post('save',                             ['as' => $controllerName . '/save',        'uses' => $controller . 'save']);
     });
 
-    // ============================== CATEGORY ==============================
-    $prefix         = 'democategory';
-    $controllerName = 'democategory';
-    Route::group(['prefix' =>  $prefix], function () use ($controllerName) {
-        $controller = ucfirst($controllerName)  . 'Controller@';
-        Route::get('/',                                 ['as' => $controllerName,                  'uses' => $controller . 'index']);
-        Route::get('form/{id?}',                        ['as' => $controllerName . '/form',        'uses' => $controller . 'form'])->where('id', '[0-9]+');
-        Route::post('save',                             ['as' => $controllerName . '/save',        'uses' => $controller . 'save']);
-    });
-
     // ============================== product_categories ==============================
     $prefix         = 'product-category';
     $controllerName = 'productCategory';
@@ -210,27 +200,6 @@ Route::group(['prefix' => $prefixAdmin, 'namespace' => 'Admin', 'middleware' => 
         Route::get('change-amount-variant/{id?}',                       ['as' => $controllerName . '/changeAmount',      'uses' => $controller . 'changeAmount'])->where('id', '[0-9]+');
     });
     
-    // ============================== SLIDER ==============================
-    $prefix         = 'attribute';
-    $controllerName = 'attribute';
-    Route::group(['prefix' =>  $prefix], function () use ($controllerName) {
-        $controller = ucfirst($controllerName)  . 'Controller@';
-        Route::get('/',                             ['as' => $controllerName,                  'uses' => $controller . 'index']);
-        Route::get('form/{id?}',                    ['as' => $controllerName . '/form',        'uses' => $controller . 'form'])->where('id', '[0-9]+');
-        Route::post('save',                         ['as' => $controllerName . '/save',        'uses' => $controller . 'save']);
-        Route::get('delete/{id}',                   ['as' => $controllerName . '/delete',      'uses' => $controller . 'delete'])->where('id', '[0-9]+');
-        Route::get('change-status-{status}/{id}',   ['as' => $controllerName . '/status',      'uses' => $controller . 'status'])->where('id', '[0-9]+');
-    });
-
-    // ============================== PRODUCT_ATTRIBUTE ==============================
-    $prefix         = 'product-attribute';
-    $controllerName = 'productAttribute';
-    Route::group(['prefix' =>  $prefix], function () use ($controllerName) {
-        $controller = ucfirst($controllerName)  . 'Controller@';
-        Route::get('/',                                 ['as' => $controllerName,                  'uses' => $controller . 'index']);
-        // Route::get('form/{id?}',                        ['as' => $controllerName . '/form',        'uses' => $controller . 'form'])->where('id', '[0-9]+');
-        Route::post('save',                             ['as' => $controllerName . '/save',        'uses' => $controller . 'save']);
-    });
 });
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['permission.admin']], function () {

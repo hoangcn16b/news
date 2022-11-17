@@ -7,6 +7,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "doctrine/dbal": "^3.3",
+        "enyo/dropzone": "^5.9",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -15,7 +16,10 @@
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.10",
+        "twilio/sdk": "^5.0",
         "unisharp/laravel-filemanager": "^2.5",
+        "vonage/client": "^3.0",
+        "yajra/laravel-datatables-oracle": "^9.21",
         "yoeunes/toastr": "^2.0"
     },
     "require-dev": {

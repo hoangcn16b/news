@@ -48,7 +48,8 @@ if (count($itemsMenu) > 0) {
         }
     }
     if (session('userInfo')) {
-        $xhtmlMenuUser = sprintf('<li><a href="%s">%s</a></li>', route('auth/logout'), 'Logout');
+        $xhtmlMenuUser = sprintf('<li><a href="%s" target="_blank">%s</a></li>', route('dashboard'), 'Admin Dashboard');
+        $xhtmlMenuUser .= sprintf('<li><a href="%s">%s</a></li>', route('auth/logout'), 'Logout');
     } else {
         $xhtmlMenuUser = sprintf('<li><a href="%s">%s</a></li>', route('auth/login'), 'Login');
     }

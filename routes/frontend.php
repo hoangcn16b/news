@@ -3,7 +3,8 @@
 $prefixAdmin = config('zvn.url.prefix_admin');
 $prefixNews  = config('zvn.url.prefix_news');
 use Illuminate\Support\Facades\Route;
-
+Route::get('/chart','News\HomeController@chart');
+Route::get('/datatable-data','News\HomeController@data')->name('datatable');
 Route::group(['prefix' => $prefixNews, 'namespace' => 'News'], function () {
     // ============================== HOMEPAGE ==============================
     $prefix         = '';
